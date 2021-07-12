@@ -1,0 +1,11 @@
+.custom-navbar {
+  background: white !important;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.custom-title {
+  font-weight: 400;
+  font-family: "Encode Sans SC", sans-serif;
+}
