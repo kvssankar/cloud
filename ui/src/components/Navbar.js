@@ -34,7 +34,7 @@ const NavbarFinal = (props) => {
         <NavbarBrand className="custom-title" href="/">
           <img
             height="35px"
-            style={{ margin: "auto 5px" }}
+            style={{ margin: "auto 10px" }}
             src="/security.png"
             alt="Logo"
           />

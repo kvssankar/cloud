@@ -21,8 +21,8 @@ import "froala-editor/js/plugins.pkgd.min.js";
 
 // Include font-awesome css if required.
 // install using "npm install font-awesome --save"
-// import 'font-awesome/css/font-awesome.css';
-// import 'froala-editor/js/third_party/font_awesome.min.js';
+import "font-awesome/css/font-awesome.css";
+import "froala-editor/js/third_party/font_awesome.min.js";
 
 // Include special components if required.
 // import FroalaEditorView from 'react-froala-wysiwyg/FroalaEditorView';
@@ -33,6 +33,6 @@ import "froala-editor/js/plugins.pkgd.min.js";
 
 // Render Froala Editor component.
 ReactDOM.render(
-  <FroalaEditorComponent tag="textarea" />,
+  <FroalaEditorComponent tag="textarea" config={{ heightMin: 500 }} />,
   document.getElementById("editor")
 );
