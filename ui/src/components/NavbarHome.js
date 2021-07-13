@@ -4,8 +4,6 @@ import {
   Navbar,
   NavbarToggler,
   NavbarBrand,
-  Nav,
-  NavItem,
   NavbarText,
   ButtonGroup,
 } from "reactstrap";

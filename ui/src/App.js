@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import PrivateRoute from "./components/PrivateRoute";
+// import PrivateRoute from "./components/PrivateRoute";
 import Applet from "./pages/Applet";
 import Home from "./pages/Home";
 import Loading from "./Test.js";
