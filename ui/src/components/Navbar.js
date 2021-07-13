@@ -55,10 +55,10 @@ const NavbarFinal = (props) => {
         <NavbarText>
           <ButtonGroup style={{ marginRight: "10px" }}>
             <Button onClick={onShare} color="primary">
-              <i class="fi-rr-cloud-share"></i>
+              <i className="fi-rr-cloud-share"></i>
             </Button>
             <Button color="danger" className="btn-flex">
-              <i class="fi-rr-trash"></i>
+              <i className="fi-rr-trash"></i>
             </Button>
           </ButtonGroup>
         </NavbarText>
