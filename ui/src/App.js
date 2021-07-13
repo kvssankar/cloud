@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
 import Applet from "./pages/Applet";
+import Home from "./pages/Home";
 import Loading from "./Test.js";
 
 //TODO: Make display page
@@ -17,6 +18,7 @@ function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/" exact component={Home} />
         <Route path="/app" exact component={Applet} />
         <Route path="/test" exact component={Loading} />
         {/* <PrivateRoute path="/dashboard" exact component={Dashboard} /> */}

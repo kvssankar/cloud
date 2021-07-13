@@ -7,30 +7,16 @@ import {
   Nav,
   NavItem,
   NavbarText,
-  Input,
   ButtonGroup,
-  Button,
 } from "reactstrap";
 import "../css/navbar.css";
-const NavbarFinal = (props) => {
+const NavbarHome = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [title, setTitle] = useState("");
   const toggle = () => setIsOpen(!isOpen);
-
-  const onTitleChange = (e) => {
-    setTitle(e.target.value);
-    console.log(e.target.value);
-    document.title = e.target.value + " | PrivateShare";
-  };
-
-  const onShare = () => {
-    let text = document.querySelector(".fr-view").innerHTML;
-    console.log(text);
-  };
 
   return (
     <div>
-      <Navbar className="custom-navbar" color="light" light expand="md">
+      <Navbar className="custom-navbar-home" expand="md">
         <NavbarBrand className="custom-title" href="/">
           <img
             height="35px"
@@ -42,7 +28,7 @@ const NavbarFinal = (props) => {
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
+          {/* <Nav className="mr-auto" navbar>
             <NavItem>
               <Input
                 value={title}
@@ -50,16 +36,26 @@ const NavbarFinal = (props) => {
                 placeholder="Set Title"
               />
             </NavItem>
-          </Nav>
+          </Nav> */}
         </Collapse>
         <NavbarText>
           <ButtonGroup style={{ marginRight: "10px" }}>
-            <Button onClick={onShare} color="primary">
-              <i class="fi-rr-cloud-share"></i>
-            </Button>
-            <Button color="danger" className="btn-flex">
-              <i class="fi-rr-trash"></i>
-            </Button>
+            <a
+              className="btn btn-dark btn-md text-light"
+              href="https://github.com/kvssankar"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Github
+            </a>
+            <a
+              className="btn btn-primary btn-md text-light"
+              href="https://www.linkedin.com/in/sankarkvs/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Linkedin
+            </a>
           </ButtonGroup>
         </NavbarText>
       </Navbar>
@@ -67,4 +63,4 @@ const NavbarFinal = (props) => {
   );
 };
 
-export default NavbarFinal;
+export default NavbarHome;
