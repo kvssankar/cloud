@@ -32,7 +32,15 @@ import "froala-editor/js/plugins.pkgd.min.js";
 // import FroalaEditorInput from 'react-froala-wysiwyg/FroalaEditorInput';
 
 // Render Froala Editor component.
+
+const options = {
+  heightMin: 500,
+  filesManagerUploadURL: "http://i.froala.com/upload",
+  imageUploadURL: "http://i.froala.com/upload",
+  videoUploadURL: "http://i.froala.com/upload",
+};
+
 ReactDOM.render(
-  <FroalaEditorComponent tag="textarea" config={{ heightMin: 500 }} />,
+  <FroalaEditorComponent tag="textarea" config={options} />,
   document.getElementById("editor")
 );
