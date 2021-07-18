@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
   background-color: #e4ebf1;
+  height: 100%;
 }
 
 code {
@@ -18,4 +19,8 @@ i {
 .btn-flex {
   display: flex;
   align-items: center;
+}
+
+.spinner-border .sr-only {
+  display: none !important;
 }

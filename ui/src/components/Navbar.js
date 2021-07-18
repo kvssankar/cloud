@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import {
-  Collapse,
   Navbar,
-  NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
@@ -12,20 +10,14 @@ import {
   Button,
 } from "reactstrap";
 import "../css/navbar.css";
+import ModalExample from "./Model";
 const NavbarFinal = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
   const [title, setTitle] = useState("");
-  const toggle = () => setIsOpen(!isOpen);
 
   const onTitleChange = (e) => {
     setTitle(e.target.value);
     console.log(e.target.value);
     document.title = e.target.value + " | PrivateShare";
-  };
-
-  const onShare = () => {
-    let text = document.querySelector(".fr-view").innerHTML;
-    console.log(text);
   };
 
   return (
@@ -40,24 +32,34 @@ const NavbarFinal = (props) => {
           />
           PrivateShare
         </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <Input
-                value={title}
-                onChange={onTitleChange}
-                placeholder="Set Title"
-              />
-            </NavItem>
-          </Nav>
-        </Collapse>
-        <NavbarText>
+        <Nav navbar>
+          <NavItem>
+            <Input
+              style={{ margin: "0 10px" }}
+              value={title}
+              onChange={onTitleChange}
+              placeholder="Set Title"
+            />
+          </NavItem>
+        </Nav>
+        <NavbarText style={{ marginLeft: "auto" }}>
           <ButtonGroup style={{ marginRight: "10px" }}>
-            <Button onClick={onShare} color="primary">
+            {/* <Button onClick={onShare} color="primary">
               <i className="fi-rr-cloud-share"></i>
-            </Button>
-            <Button color="danger" className="btn-flex">
+            </Button> */}
+            <ModalExample
+              buttonLabel={<i className="fi-rr-cloud-share"></i>}
+              title="Enter password"
+              pageTitle={title}
+              matter="If you dont want to set password leave the box empty"
+            />
+            <Button
+              color="danger"
+              onClick={() => {
+                document.querySelector(".fr-view").innerHTML = "";
+              }}
+              className="btn-flex"
+            >
               <i className="fi-rr-trash"></i>
             </Button>
           </ButtonGroup>

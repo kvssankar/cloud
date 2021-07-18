@@ -5,7 +5,7 @@ import "../css/home.css";
 const Home = () => (
   <div>
     <NavbarHome />
-    <div className="d-flex flex-row justify-content-around">
+    <div className="block d-flex flex-row justify-content-around">
       <div className="col-lg-5 mx-auto left">
         <h3 className="heading">Share your stuff privately</h3>
         <p>
@@ -16,19 +16,23 @@ const Home = () => (
         </p>
         <div className="d-flex flex-row">
           <div className="boxes">
-            <img src="./network.png" alt="network" />
+            <img className="img-fluid" src="./network.png" alt="network" />
             <p className="subtitle" style={{ textAlign: "center" }}>
               Share
             </p>
           </div>
           <div className="boxes">
-            <img src="./private-detective.png" alt="network" />
+            <img
+              className="img-fluid"
+              src="./private-detective.png"
+              alt="network"
+            />
             <p className="subtitle" style={{ textAlign: "center" }}>
               Private
             </p>
           </div>
           <div className="boxes">
-            <img src="./url.png" alt="network" />
+            <img className="img-fluid" src="./url.png" alt="network" />
             <p className="subtitle" style={{ textAlign: "center" }}>
               Effortless
             </p>
@@ -38,7 +42,7 @@ const Home = () => (
           Start Writing
         </a>
       </div>
-      <div className="col-lg-7 right d-flex justify-content-center">
+      <div className="off col-lg-7 right d-flex justify-content-center">
         <img src="./cyber-security.png" alt="Logo" />
       </div>
     </div>

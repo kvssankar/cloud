@@ -32,3 +32,22 @@
   height: 90%;
   width: 90%;
 }
+
+@media only screen and (max-width: 600px) {
+  .off {
+    display: none !important;
+  }
+  .left {
+    padding: 30px;
+  }
+  .navbar-text {
+    margin-left: auto;
+  }
+  .block {
+    display: block !important;
+  }
+  .boxes {
+    height: 100px;
+    width: 100px;
+  }
+}
