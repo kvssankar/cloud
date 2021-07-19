@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Applet from "./pages/Applet";
 import Home from "./pages/Home";
 import Verify from "./pages/Verfiy";
+import ViewPage from "./pages/View";
 import Loading from "./Test.js";
 
 //TODO: Make display page
@@ -22,7 +23,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/app" exact component={Applet} />
         <Route path="/v/:title" exact component={Verify} />
-        <Route path="/unlocked" exact component={Applet} />
+        <Route path="/view" exact component={ViewPage} />
         <Route path="/test" exact component={Loading} />
         {/* <PrivateRoute path="/dashboard" exact component={Dashboard} /> */}
       </Switch>

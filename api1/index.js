@@ -7,6 +7,12 @@ require("dotenv").config();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+//run ui and api1 in same instance and communicate between them
+//create vpc subnets and run
+// create 2 different ec2s in same vpc and communicate
+// s3 access to ec2
+//s3 access to app
+
 const connect = mongoose
   .connect(process.env.mongouri, {
     useFindAndModify: false,
