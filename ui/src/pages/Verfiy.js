@@ -11,12 +11,11 @@ const Verify = (props) => {
     axios
       .post("/check", { title: title, password: pass })
       .then((res) => {
-        console.log(res.data);
         localStorage.setItem("page-data", JSON.stringify(res.data));
         document.location.href = "/view/" + title;
       })
       .catch((err) => {
-        console.log(err.response.data);
+        alert(err.response.data);
       });
   };
   return (
