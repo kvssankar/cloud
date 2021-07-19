@@ -48,9 +48,10 @@ app.post("/add", async (req, res) => {
 app.post("/check", async (req, res) => {
   const { title, password } = req.body;
   const link = await Link.findOne({ title });
-  if (!link) return res.redirect("/failed");
+  if (!link) return res.status(500).json({ mssg: "No title found" });
   const validPassword = await bc.compare(password, link.password);
-  if (!validPassword) res.redirect("/failed");
+  if (!validPassword)
+    return res.status(500).json({ mssg: "Invalid credentials" });
   res.json({ link });
 });
 

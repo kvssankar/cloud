@@ -45,10 +45,18 @@ const ViewPage = () => {
           <img height="35px" src="/security.png" alt="Logo" />
           PrivateShare
         </NavbarBrand>
-        <h3 className="mt-2" style={{ textTransform: "capitalize" }}>
+        <h3
+          className="mt-3"
+          style={{ textTransform: "capitalize", marginLeft: 15 }}
+        >
           {title}
         </h3>
-        <div className="mt-2">{parse(htmlString, { trim: true })}</div>
+        <div
+          className="mt-2"
+          style={{ textTransform: "capitalize", marginLeft: 15 }}
+        >
+          {parse(htmlString, { trim: true })}
+        </div>
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/app" exact component={Applet} />
         <Route path="/v/:title" exact component={Verify} />
-        <Route path="/view" exact component={ViewPage} />
+        <Route path="/view/:title" exact component={ViewPage} />
         <Route path="/test" exact component={Loading} />
         {/* <PrivateRoute path="/dashboard" exact component={Dashboard} /> */}
       </Switch>

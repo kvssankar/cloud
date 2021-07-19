@@ -1,10 +1,24 @@
 import React, { useState } from "react";
 import { useParams } from "react-router";
 import NavbarHome from "../components/NavbarHome";
+import axios from "axios";
+
 import "../css/verify.css";
 const Verify = (props) => {
   const { title } = useParams();
-  const [pass, setPass] = useState();
+  const [pass, setPass] = useState("");
+  const check = () => {
+    axios
+      .post("/check", { title: title, password: pass })
+      .then((res) => {
+        console.log(res.data);
+        localStorage.setItem("page-data", JSON.stringify(res.data));
+        document.location.href = "/view/" + title;
+      })
+      .catch((err) => {
+        console.log(err.response.data);
+      });
+  };
   return (
     <>
       <NavbarHome />
@@ -22,7 +36,9 @@ const Verify = (props) => {
           value={pass}
           onChange={(e) => setPass(e.target.value)}
         />
-        <button className="mt-2 btn btn-md btn-primary">Enter</button>
+        <button onClick={check} className="mt-2 btn btn-md btn-primary">
+          Enter
+        </button>
       </div>
     </>
   );
