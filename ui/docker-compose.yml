@@ -8,3 +8,10 @@ services:
             dockerfile: DockerFile
         ports: 
             - "1111:3000"
+    ps-ui-prod:
+        container_name: ps-ui-prod
+        build:
+            context: .
+            dockerfile: DockerFile.prod
+        ports: 
+            - "5555:80"

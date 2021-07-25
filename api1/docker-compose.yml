@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    ps-api1:
+        container_name: ps-api1
+        env_file:
+            - .env
+        build:
+            context: .
+            dockerfile: DockerFile
+        ports: 
+            - "5000:5000"
