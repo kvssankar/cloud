@@ -6,15 +6,23 @@ import Verify from "./pages/Verfiy";
 import ViewPage from "./pages/View";
 import Loading from "./Test.js";
 
-//TODO: Make display page
-//TODO: Expires in a day
-//TODO: Change titles
-//TODO: Set password
-//TODO: Share button
-//TODO: AWS HOSTING
-//TODO: AWS S3 USE IF POSSIBLE
-//TODO: ENCRIPTION IF POSSIBLE
+//TODO: show expires in, in view page
 //TODO: Loading page
+
+//level 1
+//dockerize api1,api2,ui and upload in aws ecr or dockerhub
+//api1 private subnet1
+//api2 private subnet2
+//mongo db3 private subset3
+//ENCRIPTION IF POSSIBLE
+//ui public subet all in same vpc
+//s3 for images and videos
+//security groups for transfer of data
+
+//level2
+//Expires in a time set by them, use aws lambda for this
+//use efs and ebs for video and html files storage respectively, and store the link of html file in mongodb
+//create snapshots for every week of s3 using lambda
 
 function App() {
   return (

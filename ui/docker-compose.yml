@@ -1,0 +1,10 @@
+version: '3'
+
+services: 
+    ps-ui-dev:
+        container_name: ps-ui-dev
+        build:
+            context: .
+            dockerfile: DockerFile
+        ports: 
+            - "1111:3000"
