@@ -1,0 +1,39 @@
+terraform-basics:
+	terraform init
+	terraform plan
+	terraform apply
+	terraform apply -auto-approve
+	terraform destroy
+	terraform state list
+	terraform state show aws_eip.one
+	terraform refresh //for refreshing outputs
+	
+
+docker-basics:
+	docker version
+	docker info
+	docker container run -it -p 80:80 nginx
+	docker container ls
+	docker ps
+	docker container ls -a
+	docker container rm <id3letters>
+	docker images
+	docker image rm <id3letters>
+	docker container run -d -p 80:80 --name myname nginx
+	docker container start <name>
+	docker container run -d -p 3306:3306 --name mysql --env MYSQL_ROOT_PASSWORD=123456 mysql
+	docker container stop <name>
+
+	docker container exec -it myname bash
+	docker exec -ti <id> /bin/sh
+
+	docker container run -d -p 80:80 -v <directorywheretoedit>:/usr/share/nginx/html --name mynginx nginx
+
+	docker image build -t <username>/nginx-website .
+	docker container run -d -p 8080:80 <username>/nginx-website
+	docker push  <username>/nginx-website
+
+	dcoker-compose up
+
+website-cmds:
+	docker image build -f DockerFile.prod -t ui-prod .

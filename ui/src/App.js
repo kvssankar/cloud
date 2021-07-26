@@ -13,15 +13,15 @@ import Loading from "./Test.js";
 //dockerize api1,api2,ui and upload in aws ecr or dockerhub
 //api1 private subnet1
 //api2 private subnet2
-//mongo db3 private subset3
-//ENCRIPTION IF POSSIBLE
+//mongo db in docker in private subset3
 //ui public subet all in same vpc
 //s3 for images and videos
 //security groups for transfer of data
 
 //level2
+//mongo db connect ebs volumes to mongodb
+//ENCRIPTION IF POSSIBLE
 //Expires in a time set by them, use aws lambda for this
-//use efs and ebs for video and html files storage respectively, and store the link of html file in mongodb
 //create snapshots for every week of s3 using lambda
 
 function App() {
