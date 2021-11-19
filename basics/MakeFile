@@ -34,6 +34,7 @@ docker-basics:
 	docker push  <username>/nginx-website
 
 	dcoker-compose up
+	docker-compose build
 
 website-cmds:
 	docker image build -f DockerFile.prod -t ui-prod .
